@@ -1,0 +1,13 @@
+h1 Dramatikal.com Production
+p This is a production page for #{production.title}
+
+div(class='message')
+  #{message}
+
+h2 Cast
+- for (var castIndex in production.cast)
+  li
+    #{production.cast[castIndex].role} : #{production.cast[castIndex].actor}
+
+p
+  a(href='/productions/edit/#{production._id.toString()}') Edit Production

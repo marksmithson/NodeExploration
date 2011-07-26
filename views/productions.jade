@@ -1,0 +1,12 @@
+h1 Dramatikal.com Productions
+p This page lists the current productions
+
+h2 Productions
+
+ul#productions
+  - for (var production in productions)
+    li 
+      a(href='/productions/#{productions[production]._id.toHexString()}') #{productions[production].title}
+  
+p
+  a(href='/productions/add') Add New Production

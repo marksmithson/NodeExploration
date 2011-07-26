@@ -1,0 +1,11 @@
+h1 Dramatikal.com Edit Production
+form(action='/productions/edit/#{production._id.toString()}',method='POST')
+  div(class='input-container')
+    label(for='title') Title:
+    input(name='title', type='text', value='#{production.title}')
+  input(type='submit', value='Update')
+
+h2 Cast
+- for (var castIndex in production.cast)
+  li
+    #{production.cast[castIndex].role} : #{production.cast[castIndex].actor}
